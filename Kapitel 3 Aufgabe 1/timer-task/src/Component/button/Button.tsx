@@ -1,5 +1,11 @@
-function Button({ buttonText }: { buttonText: string }) {
-  return <button>{buttonText}</button>;
+function Button({
+  className,
+  buttonText,
+}: {
+  className: string;
+  buttonText: string;
+}) {
+  return <button className={className}>{buttonText}</button>;
 }
 
 export default Button;

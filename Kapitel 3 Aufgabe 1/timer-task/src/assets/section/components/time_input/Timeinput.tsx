@@ -1,8 +1,10 @@
+import "./Timeinput.css";
+
 function Timeinput() {
   return (
-    <div className="">
-      <label htmlFor="time-input">Zeit festlegen:</label>
-      <input id="time-input" type="number" min="0" placeholder="Seconds" />
+    <div className="time-input">
+      <label htmlFor="time-input-title">Zeit festlegen:</label>
+      <input id="time-input" type="number" min="0" placeholder="0" />
     </div>
   );
 }
