@@ -1,12 +1,12 @@
 import "./App.css";
-import Button from "./Component/button/Button";
+import ButtonArea from "./assets/section/components/button_area/ButtonArea";
+import Timeinput from "./assets/section/components/time_input/Timeinput";
 
 function App() {
   return (
-    <div className="section-button">
-      <Button buttonText={"Start"} />
-      <Button buttonText={"Pause"} />
-      <Button buttonText={"Reset"} />
+    <div className="App">
+      <Timeinput />
+      <ButtonArea />
     </div>
   );
 }
