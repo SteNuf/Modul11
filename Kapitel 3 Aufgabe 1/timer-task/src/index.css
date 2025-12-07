@@ -1,7 +1,24 @@
-#root {
-  margin: 20rem;
-  padding: 2rem;
+body {
+  margin: 0;
   display: flex;
-  text-align: center;
-  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 400;
+  cursor: pointer;
+  font-family: inherit;
+  background-color: rgb(52, 52, 170);
+}
+
+.button:hover {
+  background-color: rgb(72, 72, 190);
+}
+.button:focus,
+.button:focus-visible {
+  outline: 4px auto webkit-focus-ring-color;
 }
