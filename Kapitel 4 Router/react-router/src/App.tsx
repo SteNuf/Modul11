@@ -6,10 +6,11 @@ import Root from "./routes/Root";
 import ErrorPage from "./routes/error/ErrorPage";
 import Index from "./routes/Index";
 import { ClickerContext } from "./context/ClickerContext";
-import { useState } from "react";
+import { useReducer } from "react";
+import { clickerReducer } from "./hook/clickerReducer";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useReducer(clickerReducer, 0);
 
   const router = createBrowserRouter([
     {

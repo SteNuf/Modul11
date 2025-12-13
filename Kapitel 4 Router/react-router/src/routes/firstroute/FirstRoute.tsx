@@ -6,7 +6,11 @@ function FirstRoute() {
   const { itemId } = useParams();
   const { count, setCount } = useContext(ClickerContext);
 
-  return <button onClick={() => setCount(count + 1)}>Click {count}</button>;
+  return (
+    <button onClick={() => setCount({ type: "increment", value: 1 })}>
+      Click {count}
+    </button>
+  );
 }
 
 export default FirstRoute;
