@@ -14,8 +14,19 @@ function App() {
       errorElement: <ErrorPage />,
       children: [
         { index: true, element: <Index /> },
-        { path: "/first", element: <FirstRoute /> },
-        { path: "/second", element: <SecondRoute /> },
+        {
+          path: "first",
+          element: <FirstRoute />,
+          children: [
+            { index: true, element: <FirstRoute /> },
+            {
+              path: ":itemId",
+              element: <FirstRoute />,
+              children: [{ path: "edit", element: <FirstRoute /> }],
+            },
+          ],
+        },
+        { path: "second", element: <SecondRoute /> },
       ],
     },
   ]);

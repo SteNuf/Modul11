@@ -1,16 +1,16 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "./Root.css";
 
 function Root() {
   return (
     <div className="root-body">
       <nav className="sidebar-container">
-        <a href="/first">
+        <Link to="/first">
           <button className="sidebar-item">First</button>
-        </a>
-        <a href="/second">
+        </Link>
+        <Link to="/second">
           <button className="sidebar-item">Second</button>
-        </a>
+        </Link>
       </nav>
       <main className="main-content">
         <Outlet />
