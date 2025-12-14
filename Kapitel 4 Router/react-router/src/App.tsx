@@ -8,6 +8,7 @@ import Index from "./routes/Index";
 import { ClickerContext } from "./context/ClickerContext";
 import { useReducer } from "react";
 import { clickerReducer } from "./hook/clickerReducer";
+import User from "./routes/user/User";
 
 function App() {
   const [count, setCount] = useReducer(clickerReducer, 0);
@@ -32,6 +33,7 @@ function App() {
           ],
         },
         { path: "second", element: <SecondRoute /> },
+        { path: "user", element: <User /> },
       ],
     },
   ]);
