@@ -38,10 +38,11 @@ function App() {
     },
   ]);
 
-  return;
-  <ClickerContext.Provider value={{ count, setCount }}>
-    <RouterProvider router={router} />;
-  </ClickerContext.Provider>;
+  return (
+    <ClickerContext.Provider value={{ count, setCount }}>
+      <RouterProvider router={router} />;
+    </ClickerContext.Provider>
+  );
 }
 
 export default App;
