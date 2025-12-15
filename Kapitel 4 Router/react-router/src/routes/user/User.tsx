@@ -1,3 +1,4 @@
+import { Card, Typography, CardContent, CardMedia } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -43,14 +44,33 @@ function User() {
   function displayUser() {
     if (user) {
       return (
-        <div>
-          <img alt="User Profile" src={user.picture.medium} />
-          <p>
-            {user.name.first} {user.name.last}
-          </p>
-          <p>{user.email}</p>
-          <p>{user.gender}</p>
-        </div>
+        <>
+          <Card sx={{ maxWidth: 345 }}>
+            <CardMedia
+              sx={{ height: 345 }}
+              image={user.picture.large}
+              title="User Profile"
+            />
+            <CardContent>
+              <Typography variant="h5">
+                {user.name.first} {user.name.last}
+              </Typography>
+
+              <Typography variant="body2">
+                {user.email}
+                {user.gender}
+              </Typography>
+            </CardContent>
+          </Card>
+          {/* <div>
+            <img alt="User Profile" src={user.picture.medium} />
+            <p>
+              {user.name.first} {user.name.last}
+            </p>
+            <p>{user.email}</p>
+            <p>{user.gender}</p>
+          </div> */}
+        </>
       );
     } else {
       return <p>{errorText}</p>;
